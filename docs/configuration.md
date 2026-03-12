@@ -11,7 +11,7 @@
 ## Example
 
 ```ts
-import type { ReadmefyConfig } from "readmefy";
+import type { ReadmefyConfig } from "@gabikamel99/readmefy";
 
 const config: ReadmefyConfig = {
   template: "library",

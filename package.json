@@ -1,5 +1,5 @@
 {
-  "name": "readmefy",
+  "name": "@gabikamel99/readmefy",
   "version": "0.1.0",
   "description": "Deterministic README infrastructure for real repositories.",
   "type": "module",
@@ -25,12 +25,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gkamel/readmefy.git"
+    "url": "git+https://github.com/gabi-1212/readmefy.git"
   },
   "bugs": {
-    "url": "https://github.com/gkamel/readmefy/issues"
+    "url": "https://github.com/gabi-1212/readmefy/issues"
   },
-  "homepage": "https://github.com/gkamel/readmefy#readme",
+  "homepage": "https://github.com/gabi-1212/readmefy#readme",
   "funding": {
     "type": "github",
     "url": "https://github.com/sponsors/gkamel"

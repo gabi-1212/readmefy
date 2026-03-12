@@ -3,13 +3,13 @@
 ## Install
 
 ```bash
-npm install --save-dev readmefy
+npm install --save-dev @gabikamel99/readmefy
 ```
 
 Or run it without installation:
 
 ```bash
-npx readmefy
+npx @gabikamel99/readmefy
 ```
 
 ## Generate a README

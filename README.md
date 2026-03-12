@@ -1,7 +1,7 @@
 # readmefy
 
 [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](./LICENSE)
-[![CI](https://github.com/gkamel/readmefy/actions/workflows/ci.yml/badge.svg)](https://github.com/gkamel/readmefy/actions/workflows/ci.yml)
+[![CI](https://github.com/gabi-1212/readmefy/actions/workflows/ci.yml/badge.svg)](https://github.com/gabi-1212/readmefy/actions/workflows/ci.yml)
 
 `readmefy` is README infrastructure for real repositories.
 
@@ -20,6 +20,13 @@ Most README generators are one-shot scaffolds. `readmefy` is built to be rerun s
 ## Quick start
 
 ```bash
+npx @gabikamel99/readmefy
+```
+
+Or install it in your project and use the local binary:
+
+```bash
+npm install --save-dev @gabikamel99/readmefy
 npx readmefy
 ```
 
@@ -165,7 +172,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - uses: gkamel/readmefy@main
+      - uses: gabi-1212/readmefy@main
         with:
           mode: check
 ```

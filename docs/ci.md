@@ -20,13 +20,13 @@ jobs:
           node-version: 20
           cache: npm
       - run: npm ci
-      - run: npx readmefy check
+      - run: npx @gabikamel99/readmefy check
 ```
 
 ## Official action
 
 ```yaml
-- uses: gkamel/readmefy@main
+- uses: gabi-1212/readmefy@main
   with:
     mode: check
     cwd: .
