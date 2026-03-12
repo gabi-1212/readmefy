@@ -1,0 +1,62 @@
+name: readmefy
+description: Generate or check deterministic README files from repository metadata.
+inputs:
+  mode:
+    description: Whether to run in generate or check mode.
+    default: check
+  cwd:
+    description: Working directory to analyze.
+    default: .
+  output:
+    description: Target README file.
+    default: README.md
+  template:
+    description: Optional template override.
+    default: ""
+  badges:
+    description: Set to false to disable badge generation.
+    default: "true"
+  preserve:
+    description: Set to false to ignore protected section preservation.
+    default: "true"
+  debug:
+    description: Set to true to enable debug logging.
+    default: "false"
+  node-version:
+    description: Node.js version used to build and run readmefy.
+    default: "20"
+runs:
+  using: composite
+  steps:
+    - uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+        cache: npm
+        cache-dependency-path: ${{ github.action_path }}/package-lock.json
+    - name: Install action dependencies
+      shell: bash
+      working-directory: ${{ github.action_path }}
+      run: npm ci
+    - name: Build readmefy
+      shell: bash
+      working-directory: ${{ github.action_path }}
+      run: npm run build
+    - name: Run readmefy
+      shell: bash
+      working-directory: ${{ inputs.cwd }}
+      run: |
+        COMMAND="${{ inputs.mode }}"
+        ARGS="$COMMAND --cwd ${{ inputs.cwd }} --output ${{ inputs.output }}"
+        if [ -n "${{ inputs.template }}" ]; then
+          ARGS="$ARGS --template ${{ inputs.template }}"
+        fi
+        if [ "${{ inputs.badges }}" = "false" ]; then
+          ARGS="$ARGS --no-badges"
+        fi
+        if [ "${{ inputs.preserve }}" = "true" ]; then
+          ARGS="$ARGS --preserve"
+        fi
+        if [ "${{ inputs.debug }}" = "true" ]; then
+          ARGS="$ARGS --debug"
+        fi
+        node "${{ github.action_path }}/dist/cli.js" $ARGS

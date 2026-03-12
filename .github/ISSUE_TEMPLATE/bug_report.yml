@@ -1,0 +1,34 @@
+name: Bug report
+description: Report incorrect detection, merge behavior, or generated README output.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What is wrong and what did you expect instead?
+    validations:
+      required: true
+  - type: input
+    id: repo_type
+    attributes:
+      label: Repository type
+      description: "Example: Next.js app, npm library, monorepo"
+    validations:
+      required: true
+  - type: textarea
+    id: signals
+    attributes:
+      label: Repository signals
+      description: List the files or metadata that should have informed generation.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Reproduction
+      description: Include commands, config, and current output.
+    validations:
+      required: true

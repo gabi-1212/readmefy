@@ -1,0 +1,19 @@
+{
+  "name": "@acme/env-doctor",
+  "version": "0.9.2",
+  "description": "CLI tool for checking local environment contracts before deploys.",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acme/env-doctor.git"
+  },
+  "license": "MIT",
+  "bin": {
+    "env-doctor": "./src/cli.ts"
+  },
+  "scripts": {
+    "build": "tsup src/cli.ts --format esm --dts false",
+    "lint": "eslint src",
+    "test": "vitest run"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "customer-portal",
+  "version": "2.3.0",
+  "private": true,
+  "description": "Customer-facing Next.js portal with authenticated account flows.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "next": "16.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "^9.39.1",
+    "typescript": "^5.9.3"
+  }
+}

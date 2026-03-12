@@ -1,0 +1,22 @@
+{
+  "name": "@acme/markdown-kit",
+  "version": "1.4.0",
+  "description": "Utilities for rendering deterministic markdown fragments.",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/acme/markdown-kit.git"
+  },
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "import": "./src/index.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "lint": "eslint src",
+    "test": "vitest run"
+  }
+}

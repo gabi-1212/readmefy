@@ -1,0 +1,13 @@
+[project]
+name = "readmefy-pkg"
+version = "0.3.0"
+description = "Python helpers for deterministic repository documentation."
+requires-python = ">=3.11"
+dependencies = ["click>=8.1.7"]
+
+[project.scripts]
+readmefy-pkg = "readmefy_pkg.__main__:main"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"

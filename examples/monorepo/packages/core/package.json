@@ -1,0 +1,14 @@
+{
+  "name": "@acme/core",
+  "version": "0.8.0",
+  "description": "Shared business logic for Acme apps.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "lint": "eslint src",
+    "test": "vitest run"
+  }
+}
